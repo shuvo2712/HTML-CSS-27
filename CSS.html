@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS - 27</title>
     <link rel="icon" type="images/png" href="images/27.png" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+
+    <!-- Header Content -->
+     
     <header>
       <h1>HTML CSS - 27</h1>
       <nav>
@@ -25,42 +28,49 @@
           <li>
             <a href="CSS.html">CSS</a>
           </li>
+          <li>
+            <a href="Shortcuts.html">Shortcuts</a>
+          </li>
+          <li>
+            <a href="Colors.html">Colors</a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <!-- Main Content -->
+
     <main>
-      <h2>CSS (Cascading Style Sheets)</h2>
-      <h3>CSS position</h3>
-      <ul>
-        <li>static (default)</li>
-        <li>relative</li>
-        <li>absolute</li>
-        <li>fixed</li>
-        <li>sticky</li>
-      </ul>
+      <h2>CSS</h2>
 
-      <h4>position:relative;</h4>
-      <p>top: 0;</p>
-      <p>left: 0;</p>
+      <section class="css-position">
+        <h3>CSS position</h3>
+        <ul>
+          <li>static - (default)</li>
+          <li>relative</li>
+          <li>absolute - (Used for navbar/sidebar/overlay/popup)</li>
+          <li>fixed - (Used to center an element)</li>
+          <li>sticky</li>
+          <li>("absolute" & "fixed" has no own spot)</li>
+          <li>("absolute" can push the element outside of parent)</li>
+          </li>
+          <li>("fixed" doesnt care about the parent, it is always relative to the viewport)</li>
+        </ul>
+      </section>
 
-      <h4>position:fixed;</h4>
-      <p>top: 50%;</p>
-      <p>left: 50%;</p>
-      <p>translate: -50% -50%;</p>
-      <h6>Used to center an element</h6>
-
-      <h4>position: sticky</h4>
-      <p>top: 0;</p>
-
-      <h4>position:absolute;</h4>
-      <p>top: 0;</p>
-      <p>right: 0;</p>
-      <h6>(can push the element outside of parent)</h6>
-      <h6>(can cover other elements of a website)</h6>
-      <p>z-index: 10;</p>
-      <h6>(the parent position must be :relative)</h6>
-      <h6>Used for navbar/sidebar/overlay/popup</h6>
+      <section class="css-units">
+        <h3>CSS units</h3>
+        <ul>
+          <li>px (pixels)</li>
+          <li>% (percentage)</li>
+          <li>em (relative to font-size of the element)</li>
+          <li>rem (relative to font-size of the root element)</li>
+          <li>vh (viewport height)</li>
+          <li>vw (viewport width)</li>
+          <li>vmin (viewport minimum)</li>
+          <li>vmax (viewport maximum)</li>
+        </ul>
+      </section>
     </main>
 
     <footer>

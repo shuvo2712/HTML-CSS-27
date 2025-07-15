@@ -1,11 +1,17 @@
-*{
+* {
   margin: 0;
-  padding: 0;
+  /* /padding: 0; */
   box-sizing: border-box;
 }
+body {
+  background-color: lightcyan;
+}
+
+/* Header */
 header {
+  border: 1px solid blue;
   background-color: lightblue;
-  border-radius: 0px 0px 7px 7px;
+  border-radius: 0px 0px 10px 10px;
   padding: 10px 10px;
   text-align: center;
   position: sticky;
@@ -15,6 +21,7 @@ nav ul {
   list-style-type: none;
   background-color: lightseagreen;
   border-radius: 5px;
+  margin-top: 10px;
   padding: 5px 5px;
   display: flex;
   flex-wrap: wrap;
@@ -24,6 +31,7 @@ nav ul {
 nav ul li {
   background-color: lightblue;
   border-radius: 3px;
+  cursor: pointer;
 }
 nav ul li:hover {
   background-color: lightcoral;
@@ -39,9 +47,61 @@ nav ul li a:hover {
   transition: color 0.1s ease;
 }
 
+/* Main Body */
+main {
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Colors Page*/
+.color-page {
+  background-color: white;
+  text-align: center;
+}
+.color-section {
+  margin-top: 20px;
+}
+.color-list{
+  border: 1px solid black;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+.color-list li {
+  border-radius: 5px;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+}
+.C{
+  color: blue;
+}
+.O{
+  color: red;
+}
+.L{
+  color: green;
+}
+.o{
+  color: orange;
+}
+.R{
+  color: brown;
+}
+.S{
+  color: silver;
+}
+
+
+/* Footer */
 footer {
   background-color: lightcoral;
   border-radius: 10px 10px 0px 0px;
+  border: 1px solid black;
   padding: 5px;
   text-align: center;
   position: relative;
