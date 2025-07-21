@@ -1,5 +1,15 @@
+/* Main */
+.animation-page{
+    margin: 0px;
+    padding: 10px;
+}
+
+/* Cricket */
 .cricket{
-    background-color: lightcyan;
+    padding-bottom: 15px;
+    background-color: aliceblue;
+    border: 1px solid lightseagreen;
+    border-radius: 10px;
 }
 .bat{
     height: 100px;
@@ -11,9 +21,9 @@
     width: 10px;
     border-radius: 50%;
     background-color: red;
+
     position: relative;
     left: 112px;
-
     transition: transform 1s ease-out 0.35s;
 }
 .cricket:hover .bat{
@@ -22,5 +32,53 @@
 }
 .cricket:hover .ball{
     transform: translate(500px, -100px);
+}
 
+/* Bounce */
+@keyframes ping-pong {
+    0%{
+        top: 0%;
+        left: 0%;
+    }
+    25%{
+        top: calc(100% - 20px);
+        left: calc(25% - 20px);
+        background-color: green;
+    }
+    50%{
+        top: 0%;
+        left: calc(50% - 20px);
+        background-color: blue;
+    }
+    75%{
+        top: calc(100% - 20px);
+        left: calc(75% - 20px);
+        background-color: orange;
+    }
+    100%{
+        top: 0%;
+        left: calc(100% - 20px);
+        background-color: cyan;
+    }
+}
+.bounce-stage{
+    margin-top: 20px;
+    width: auto;
+    height: 100px;
+    background-color: aliceblue;
+    border: 1px solid lightseagreen;
+    border-radius: 10px;
+
+    position: relative;
+    overflow: hidden;
+}
+.bounce-ball{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: red;
+
+    position: absolute;
+    animation: ping-pong 4s ease-in-out 1s infinite alternate;
+    /* transform: translate(-50%, -50%); */
 }

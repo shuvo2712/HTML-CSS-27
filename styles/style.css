@@ -9,7 +9,6 @@ body {
 
 /* Header */
 header {
-  border: 1px solid blue;
   background-color: lightblue;
   border-radius: 0px 0px 10px 10px;
   padding: 10px 10px;
@@ -49,61 +48,15 @@ nav ul li a:hover {
 
 /* Main Body */
 main {
-  border: 1px solid blue;
-  border-radius: 10px;
-  padding: 10px;
+    padding: 10px;
 }
 
-/* Colors Page*/
-.color-page {
-  background-color: white;
-  text-align: center;
-}
-.color-section {
-  margin-top: 20px;
-}
-.color-list{
-  border: 1px solid black;
-  border-radius: 5px;
-  list-style-type: none;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: space-between;
-}
-.color-list li {
-  border-radius: 5px;
-  padding: 10px;
-  width: calc(33.333% - 20px);
-}
-.C{
-  color: blue;
-}
-.O{
-  color: red;
-}
-.L{
-  color: green;
-}
-.o{
-  color: orange;
-}
-.R{
-  color: brown;
-}
-.S{
-  color: silver;
-}
 
 /* Footer */
 footer {
   background-color: lightcoral;
   border-radius: 10px 10px 0px 0px;
-  border: 1px solid black;
   padding: 5px;
   text-align: center;
-  position: relative;
-  bottom: 0;
   width: 100%;
 }

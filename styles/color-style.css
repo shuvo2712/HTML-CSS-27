@@ -1,0 +1,43 @@
+/* Colors Page*/
+.color-page {
+  background-color: white;
+  text-align: center;
+}
+.color-section {
+  margin-top: 20px;
+}
+.color-list{
+  border: 1px solid black;
+  border-radius: 5px;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+.color-list li {
+  border-radius: 5px;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+}
+
+/* Letters */
+.C{
+  color: blue;
+}
+.O{
+  color: red;
+}
+.L{
+  color: green;
+}
+.o{
+  color: orange;
+}
+.R{
+  color: brown;
+}
+.S{
+  color: silver;
+}
