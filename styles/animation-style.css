@@ -1,0 +1,26 @@
+.cricket{
+    background-color: lightcyan;
+}
+.bat{
+    height: 100px;
+    width: 100px;
+    transition: transform 0.3s ease-in;
+}
+.ball{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    left: 112px;
+
+    transition: transform 1s ease-out 0.35s;
+}
+.cricket:hover .bat{
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+.cricket:hover .ball{
+    transform: translate(500px, -100px);
+
+}
