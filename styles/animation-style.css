@@ -33,7 +33,7 @@
 .bat{
     height: 100px;
     width: 100px;
-    transition: transform 0.25s ease-in;
+    transition: transform 0.22s ease-in;
 }
 .ball{
     height: 10px;
@@ -46,9 +46,6 @@
     left: 112px;
 
     transition: top 0.8s ease-out 0.3s, left 0.8s ease-out 0.3s;
-    /* transition:
-    top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s,
-    left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s; */
 }
 .cricket-field:hover .bat{
     transform: rotate(-45deg);
