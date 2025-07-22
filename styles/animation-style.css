@@ -1,20 +1,39 @@
+/* Root Variables */
+:root{
+    /* Bounce */
+    --bounce-ball-size: 30px;
+}
+
 /* Main */
 .animation-page{
     margin: 0px;
     padding: 10px;
 }
 
+/* Text */
+.text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: blueviolet;
+    font-size: 1.2rem;
+}
+
 /* Cricket */
-.cricket{
-    padding-bottom: 15px;
+.cricket-field{
     background-color: aliceblue;
     border: 1px solid lightseagreen;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding-bottom: 25px;
+
+    position: relative;
+    overflow: hidden;
 }
 .bat{
     height: 100px;
     width: 100px;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.25s ease-in;
 }
 .ball{
     height: 10px;
@@ -22,16 +41,22 @@
     border-radius: 50%;
     background-color: red;
 
-    position: relative;
+    position: absolute;
+    top: calc(100% - 10px);
     left: 112px;
-    transition: transform 1s ease-out 0.35s;
+
+    transition: top 0.8s ease-out 0.3s, left 0.8s ease-out 0.3s;
+    /* transition:
+    top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s,
+    left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s; */
 }
-.cricket:hover .bat{
+.cricket-field:hover .bat{
     transform: rotate(-45deg);
     transform-origin: top right;
 }
-.cricket:hover .ball{
-    transform: translate(500px, -100px);
+.cricket-field:hover .ball{
+    top: 0;
+    left: calc(100% - 10px);
 }
 
 /* Bounce */
@@ -39,46 +64,58 @@
     0%{
         top: 0%;
         left: 0%;
+        transform: translate(0%, 0%);
     }
     25%{
-        top: calc(100% - 20px);
-        left: calc(25% - 20px);
+        top: calc(100% - var(--bounce-ball-size));
+        left: 25%;
         background-color: green;
+        transform: translate(-50%, 0%);
     }
     50%{
         top: 0%;
-        left: calc(50% - 20px);
+        left: 50%;
         background-color: blue;
+        transform: translate(-50%, 0%);
     }
     75%{
-        top: calc(100% - 20px);
-        left: calc(75% - 20px);
+        top: calc(100% - var(--bounce-ball-size));
+        left: 75%;
         background-color: orange;
+        transform: translate(-50%, 0%);
     }
     100%{
         top: 0%;
-        left: calc(100% - 20px);
+        left: 100%;
         background-color: cyan;
+        transform: translate(-100%, 0%);
     }
 }
 .bounce-stage{
-    margin-top: 20px;
-    width: auto;
-    height: 100px;
+    height: 120px;
     background-color: aliceblue;
     border: 1px solid lightseagreen;
-    border-radius: 10px;
+    border-radius: calc(var(--bounce-ball-size) / 2);
 
     position: relative;
     overflow: hidden;
 }
 .bounce-ball{
-    height: 20px;
-    width: 20px;
+    height: var(--bounce-ball-size);
+    width: var(--bounce-ball-size);
     border-radius: 50%;
     background-color: red;
 
     position: absolute;
-    animation: ping-pong 4s ease-in-out 1s infinite alternate;
+    animation: ping-pong 2s ease-in-out 0.2s infinite alternate;
     /* transform: translate(-50%, -50%); */
+}
+
+/* Scale */
+.scale{
+    margin: 5px auto;
+    border: 1px solid lightseagreen;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
 }
